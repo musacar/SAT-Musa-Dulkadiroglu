@@ -1,0 +1,41 @@
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class Player_movoment : MonoBehaviour
+{
+    public float speed = 1f;
+    private float screenWidth;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        screenWidth = Screen.width;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.touchCount > 0) 
+        { 
+         Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Stationary) 
+            {
+                if (touch.position.x > screenWidth / 2) 
+                {
+                    transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+                }
+
+                if (touch.position.x < screenWidth / 2)
+                {
+                    transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
+                }
+
+
+
+
+
+
+            }
+        }
+    }
+}
