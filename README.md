@@ -16,5 +16,5 @@ Game Over yazısı
 Restart butonu 
 <img width="115" height="70" alt="image" src="https://github.com/user-attachments/assets/fd0098b8-3874-4522-93e0-017fa6698d48" /> 
 
-Main menü ekramı 
+Main menü ekranı 
 <img width="322" height="570" alt="Ekran Alıntısı" src="https://github.com/user-attachments/assets/0a040519-f9ee-4837-971b-bbc781ba2689" />
