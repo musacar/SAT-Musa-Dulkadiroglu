@@ -1,0 +1,54 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI; // Eski Text için gerekli
+using TMPro;          // Yeni TextMeshPro için gerekli
+
+public class Score_Menager : MonoBehaviour
+{
+    public int score = 0;
+
+    // --- BURAYI DEĞİŞTİRDİK ---
+    public Text scoreText;          // Normal skorun (Eski tip Text)
+    public TMP_Text bestScoreText;  // Best Score (Yeni tip TextMeshPro)
+    // ---------------------------
+
+    void Start()
+    {
+        StartCoroutine(Score());
+    }
+
+    void Update()
+    {
+        // Eski text kullanımı
+        scoreText.text = "SCORE : " + score.ToString();
+    }
+
+    IEnumerator Score()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.8f);
+            score = score + 1;
+        }
+    }
+
+    public void OyunBitti()
+    {
+        StopAllCoroutines();
+
+        int eskiRekor = PlayerPrefs.GetInt("EnYuksekSkor", 0);
+
+        if (score > eskiRekor)
+        {
+            eskiRekor = score;
+            PlayerPrefs.SetInt("EnYuksekSkor", eskiRekor);
+            PlayerPrefs.Save();
+        }
+
+        // Yeni text (TMP) kullanımı
+        if (bestScoreText != null)
+        {
+            bestScoreText.text = "BEST SCORE: " + eskiRekor.ToString();
+        }
+    }
+}
