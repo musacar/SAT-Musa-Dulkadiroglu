@@ -1,0 +1,11 @@
+using UnityEngine;
+using UnityEngine.SceneManagement; // Bunu eklemeyi unutma, yoksa kod çalışmaz.
+
+public class MenuYoneticisi : MonoBehaviour
+{
+    public void AnaMenuyeDon()
+    {
+        // "AnaMenu" yazan yere, senin Unity'deki ana menü sahnene verdiğin ismi (örn: MenuScene, MainMenu vb.) birebir yazmalısın.
+        SceneManager.LoadScene("MAİN MENU");
+    }
+}
