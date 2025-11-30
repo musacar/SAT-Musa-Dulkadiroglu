@@ -18,3 +18,9 @@ Restart butonu
 
 Main menü ekranı 
 <img width="322" height="570" alt="Ekran Alıntısı" src="https://github.com/user-attachments/assets/0a040519-f9ee-4837-971b-bbc781ba2689" />
+
+Game Ower ekranına ana ekrana dönmek için home tuşu eklendi 
+<img width="153" height="55" alt="image" src="https://github.com/user-attachments/assets/51551dd6-a57a-46c5-9231-7c448a6acc74" />
+
+Game Ower ekranına şalışan kayıt tutabilen Best score eklendi 
+<img width="157" height="26" alt="image" src="https://github.com/user-attachments/assets/f0232ddd-31ff-4862-b7a8-9b4248d33508" />
