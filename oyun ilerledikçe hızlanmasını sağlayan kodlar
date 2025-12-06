@@ -1,0 +1,75 @@
+using UnityEngine;
+
+public class Car_Movement : MonoBehaviour
+{
+    // public float speed = 4f;  <-- Bunu sildik veya iptal ettik
+
+    void Update()
+    {
+        // Artık hızı "OyunYoneticisi"nden çekiyoruz.
+        // Böylece oyun ilerledikçe bu değer 4, 5, 6... diye artacak.
+        transform.position -= new Vector3(0, OyunYoneticisi.oyunHizi * Time.deltaTime, 0);
+
+        // Ekranın çok altına inince yok et (Performans için ekledim)
+        if (transform.position.y < -10f)
+        {
+            Destroy(gameObject);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System.Collections;
+using UnityEngine;
+
+public class Car_Spawner : MonoBehaviour
+{
+    public GameObject[] car;
+
+    void Start()
+    {
+        StartCoroutine(SpawnCars());
+    }
+
+    void Cars()
+    {
+        int rand = Random.Range(0, car.Length);
+        float randXPos = Random.Range(-1.66f, +1.66f);
+        Instantiate(car[rand], new Vector3(randXPos, transform.position.y, transform.position.z), Quaternion.identity);
+    }
+
+    IEnumerator SpawnCars()
+    {
+        while (true)
+        {
+            // MANTIK: Hız arttıkça bekleme süresi azalmalı.
+            // Formül: (Sabit Sayı) / (Oyun Hızı)
+            // Örnek: Hız 4 iken -> 8/4 = 2 saniye bekle.
+            // Örnek: Hız 8 iken -> 8/8 = 1 saniye bekle.
+
+            float beklemeSuresi = 8f / OyunYoneticisi.oyunHizi;
+
+            // Bekleme süresi çok düşüp oyun kilitlenmesin diye minimum 0.5 saniye sınır koyuyoruz
+            if (beklemeSuresi < 0.5f) beklemeSuresi = 0.5f;
+
+            yield return new WaitForSeconds(beklemeSuresi);
+
+            Cars();
+        }
+    }
+}
