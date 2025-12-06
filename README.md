@@ -25,5 +25,6 @@ Game Ower ekranına ana ekrana dönmek için home tuşu eklendi
 Game Ower ekranına şalışan kayıt tutabilen Best score eklendi 
 <img width="157" height="26" alt="image" src="https://github.com/user-attachments/assets/f0232ddd-31ff-4862-b7a8-9b4248d33508" />
 
-Yeni butonlar
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/a9dc0d39-687c-431e-93c9-6758ab7bcbf9" />
+Yeni butonlar güncelleme
+<img width="163" height="342" alt="butons-removebg-preview" src="https://github.com/user-attachments/assets/515158d5-1b2a-4f2b-8640-894793c28eaf" />
+
