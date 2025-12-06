@@ -1,0 +1,38 @@
+using UnityEngine;
+
+public class FpsGostergesi : MonoBehaviour
+{
+    float deltaTime = 0.0f;
+
+    void Update()
+    {
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+    }
+
+    void OnGUI()
+    {
+        int w = Screen.width, h = Screen.height;
+
+        GUIStyle style = new GUIStyle();
+
+        // Yazı boyutu (Ekran yüksekliğinin %5'i)
+        int yaziBoyutu = h * 5 / 100;
+
+        // --- POZİSYON AYARLAMA ---
+        // Rect(x, y, genişlik, yükseklik)
+        // x: 30 (Soldan biraz boşluk)
+        // y: h - yaziBoyutu - 30 (En alttan, yazı boyutu kadar yukarı çık)
+        Rect rect = new Rect(30, h - yaziBoyutu - 30, w, yaziBoyutu);
+
+        // Hizalamayı Sol-Alt yapıyoruz
+        style.alignment = TextAnchor.LowerLeft;
+
+        style.fontSize = yaziBoyutu;
+        style.normal.textColor = Color.green; // İstersen Color.green yapabilirsin
+
+        float fps = 1.0f / deltaTime;
+        string text = string.Format("FPS {0:0.}", fps);
+
+        GUI.Label(rect, text, style);
+    }
+}
