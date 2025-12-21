@@ -10,21 +10,19 @@ Kullanılan arabalar Png <img width="830" height="822" alt="arabalar" src="https
 
 
 
-Game Over panel <img width="317" height="559" alt="image" src="https://github.com/user-attachments/assets/a3ddec5f-bae9-4b06-b99f-fb03aeed3cc4" /> <br>
+Game Over panel ![gameover](https://github.com/user-attachments/assets/fb7a7f19-0662-499a-9abc-0b1b59b8f7c2)
+
+
+
+Main menü ekranı güncelleme ![anaekran](https://github.com/user-attachments/assets/33c74dbe-075b-4c50-9e36-f9fd160e5a52)
 
 
 
 
-Main menü ekranı güncelleme <img width="316" height="560" alt="image" src="https://github.com/user-attachments/assets/cdfdf0e9-3c19-4b27-b7c0-bb57e918d19f" /> <br>
+Game Ower ekranına şalışan kayıt tutabilen Best score eklendi ![best score](https://github.com/user-attachments/assets/8324f124-1de7-4c82-b0b8-11b9371fc785)
 
 
 
-
-Game Ower ekranına şalışan kayıt tutabilen Best score eklendi <img width="157" height="26" alt="image" src="https://github.com/user-attachments/assets/f0232ddd-31ff-4862-b7a8-9b4248d33508" /> <br>
-
-
-
-Yeni butonlar güncelleme <img width="163" height="342" alt="butons-removebg-preview" src="https://github.com/user-attachments/assets/515158d5-1b2a-4f2b-8640-894793c28eaf" /> <br>
 
 
 
